@@ -48,11 +48,19 @@ class LinkedList :
             curr_node = curr_node.siguiente
         return curr_node
 
-     def get (self, pociscion = None):
-         contador = 0 
-         dato = None
-         if posicion == None :
-             dato  = self.tail().data
+    def get (self , posicion=None):
+        contador = 0
+        dato = None
+
+        if posicion == None :
+            dato  = self.tail().data
         else :
-            pass
+            curr_node = self.__head
+            while contador != posicion:
+                contador = contador + 1
+                curr_node = curr_node.siguiente
+            if contador == posicion:
+                dato = curr_node.data
+            else :
+                print (" No existe esa posicion en la lista ")
         return dato

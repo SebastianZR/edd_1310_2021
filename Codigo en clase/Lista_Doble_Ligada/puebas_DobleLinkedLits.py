@@ -1,0 +1,17 @@
+from DobleLinkedList import DobleLinkedList
+
+ld = DobleLinkedList ()
+print (f"Lb esta vacia ? {ld.is_empy()}")
+ld.append(1)
+ld.append(2)
+ld.append(3)
+ld.append(4)
+ld.transversal()
+ld.reverse_transversal()
+ld.find_from_head(3)
+ld.find_from_tail(3)
+ld.remove_from_tail(3)
+ld.transversal()
+ld.remove_from_head(2)
+print ("-------------")
+ld.transversal()

@@ -95,3 +95,14 @@ class DobleLinkedList :
                 curr_node.next.prev = curr_node.prev
             else :
                 print ("Dato no encontrado")
+
+    def get_size (self):
+        curr_node = self.__head
+        size = 1
+        if self.__head == None :
+            size = 0
+        else :
+            while curr_node.next != None:
+                size = size + 1
+                curr_node = curr_node.next
+            return "El tamano es : " ,size

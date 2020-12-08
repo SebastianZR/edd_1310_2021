@@ -21,7 +21,7 @@ class Stack:
     def peek(self):
         return self.__data[len(self.__data)-1]
 
-     def to_string(self):
+    def to_string(self):
         print('-------')
         for item in self.__data[::-1]:
             print(f'|  {item}  |')

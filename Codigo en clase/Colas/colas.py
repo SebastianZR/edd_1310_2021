@@ -39,8 +39,9 @@ class BoundedPriorityQueue :
         return print (f"El tamanio de la lista es : {self.__size}")
 
     def enqueue (self,prioridad,elem):
-        if prioridad < self.lenght() and prioridad >= 0 :
+        if prioridad < len(self.__data) and prioridad >= 0 :
             self.__data[prioridad].enqueue(elem)
+            self.__size += 1
 
     def dequeue(self):
         if not self.is_empty():

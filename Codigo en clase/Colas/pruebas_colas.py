@@ -1,5 +1,6 @@
 from colas import Queue
 from colas import BoundedPriorityQueue
+from colas import PriorityQueue
 
 q1 = Queue()
 q1.enqueue(3)
@@ -56,5 +57,36 @@ while cpa.is_empty()==False:
     cpa.dequeue()
 else:
     print(f"Barco vacio")
-    
+
 print(f"El barco esta vacio ? : {cpa.is_empty()}")
+
+print ("\n ===============================================")
+
+print (" Pruebas con PriorityQueue . ")
+
+pq = PriorityQueue()
+pq.enqueue(maestres['prioridad'] , maestres)
+pq.enqueue(ninos['prioridad'] , ninos)
+pq.enqueue(mecanicos['prioridad'] , mecanicos)
+pq.enqueue(mujeres['prioridad'], mujeres)
+pq.enqueue(terceraEdad['prioridad'], terceraEdad)
+pq.enqueue(ninas['prioridad'],ninas)
+pq.enqueue(hombres['prioridad'],hombres)
+pq.enqueue(vigia['prioridad'],vigia)
+pq.enqueue(capitan['prioridad'],capitan)
+pq.enqueue(timonel['prioridad'],timonel)
+
+print (f"La lista esta vacia ?? {pq.is_empty()}")
+
+print(pq.to_string())
+
+pq.lenght()
+
+while pq.is_empty() == False :
+    pq.dequeue()
+else:
+    print("Barco Vacio")
+
+pq.lenght()
+
+print (f"La lista esta vacia ?? {pq.is_empty()}")

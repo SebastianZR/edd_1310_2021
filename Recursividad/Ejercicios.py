@@ -42,7 +42,7 @@ def regresivo (num):
 def delate (pila,media):
     agregamos = pila.pop()
 
-    if pila.lenght() != media  :
+    if pila.lenght() != media :
         delate(pila,media)
     else:
         pila.pop()
